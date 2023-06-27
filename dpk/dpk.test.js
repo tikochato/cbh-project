@@ -38,7 +38,7 @@ describe("deterministicPartitionKey", () => {
         });
 
         describe("and partitionKey toJson length is equal or more than 256", () => {
-          it("should be equal to hash value", () => {
+          it("should return a hash value", () => {
             const input = {
               partitionKey: {
                 key1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat semper auctor. Aliquam eleifend ut odio at tincidunt. Sed vel suscipit lorem.",
@@ -56,7 +56,7 @@ describe("deterministicPartitionKey", () => {
     });
 
     describe("does not includes partitionKey", () => {
-        it("should be equal to hash value", () => {
+        it("should return a hash value", () => {
           const input = {
             key1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat semper auctor. Aliquam eleifend ut odio at tincidunt. Sed vel suscipit lorem.",
             key2: "Quisque libero massa, lobortis blandit ullamcorper in, vulputate nec enim. Nunc convallis nisl nec metus cursus aliquam sed eget ex. Nunc ornare ipsum nec ullamcorper tincidunt. Fusce ultricies urna ac sollicitudin placerat. Fusce in dui neque",
