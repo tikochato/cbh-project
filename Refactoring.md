@@ -9,3 +9,8 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+There are different ways to refactor the code but I think that in a team it's important to give priority to improve code readability. So, these changes improve the readability and simplify the logic of the code while maintaining its functionality.
+The first thing was to replace Nested Conditionals with Guard clauses (else -> return). This is a good practice to reduce cognitive complexity.
+Move crypto logic to a different file and added tests to cover it (Single Responsibility). Split logic into smaller functions to improve readability and make the code more testable.  
+Also try not to use unnecessary `let` to avoid mutability errors.
